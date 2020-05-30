@@ -99,7 +99,7 @@ except:
     model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=['acc'])
     model.fit(train_x, train_y, epochs=200, batch_size=8, verbose=0, callbacks=[callbacks])
 
-    # print(model.evaluate(train_x, train_y))  # Shows (loss, accuracy) as a pair
+    # print(model.evaluate(train_x, train_y))  # Shows (loss, accuracy) as a tuple
 
     model.save("saved_models/myModel")
 
